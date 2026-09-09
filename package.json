@@ -1,0 +1,13 @@
+{
+  "name": "haat-document",
+  "private": true,
+  "version": "1.0.0",
+  "description": "HAAT platform documentation, and a build that makes it self-contained.",
+  "type": "module",
+  "scripts": {
+    "build": "node build-html.mjs"
+  },
+  "devDependencies": {
+    "marked": "^18.0.12"
+  }
+}

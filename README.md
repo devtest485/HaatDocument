@@ -4,6 +4,17 @@ A walkthrough of the web back office, written so it can be read aloud in a meeti
 Every screenshot is the real console running against the real API — no mock-ups, no
 placeholder data that the platform did not itself produce.
 
+> **If the screenshots below are not showing,** download
+> [`admin-console-walkthrough.html`](admin-console-walkthrough.html) and open it in any
+> browser. It is the same document with every image embedded inside the file — nothing
+> to fetch, so nothing that can be blocked. That is also the copy to send to somebody
+> outside the team, and the one to print if a PDF is wanted.
+>
+> This repository is private, so its images are served from a separate signed-URL host.
+> Anything sitting between a reader and that host — a browser extension, an ad blocker, a
+> DNS filter, an office proxy — breaks every image while the page itself loads normally.
+> The files themselves are intact.
+
 **Read this first, because it is the thing most people get wrong about this console:**
 it is **one application, not two**. There is no separate "merchant portal" and "admin
 panel". The same console, the same sign-in, the same pages — and what a person sees is
