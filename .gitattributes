@@ -1,0 +1,30 @@
+# How git must treat these files, stated rather than guessed.
+#
+# Without this, git falls back to its own heuristic for what is binary, and that
+# heuristic runs against `core.autocrlf`. On a Windows machine with autocrlf on, a file
+# git decides is text has every LF rewritten to CRLF on checkout — which for a PNG
+# changes the bytes while barely changing the size, so the result is a file of roughly
+# the right length that no longer decodes as an image. It looks like a broken upload and
+# is nothing of the kind.
+#
+# So the rule is declared here, where it travels with the repository and applies on
+# every machine, rather than depending on each developer's global git configuration.
+
+# Text files: stored with LF, checked out however the platform wants.
+* text=auto eol=lf
+
+# Binary. Never touched, never diffed as text, never line-ending converted.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.zip binary
+*.gz binary
